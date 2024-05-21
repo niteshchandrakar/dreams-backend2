@@ -14,9 +14,9 @@ postRouter.get("/",async(req,res)=>{
 })
 postRouter.post("/add",async(req,res)=>{
     try{
-const {ProductName,Price,MedName,MedDega,HumDenge,OrderForm,RefundForm,DealType,TotalShared,LastShared,Hamaracommision}=req.body
+const {ProductName,Price,MedName,MedDega,HumDenge,OrderForm,RefundForm,DealType,TotalShared,LastShared,Hamaracommision,image}=req.body
 
-const post= await new postModel({ProductName,Price,MedName,MedDega,HumDenge,OrderForm,RefundForm,DealType,TotalShared,LastShared,Hamaracommision})
+const post= await new postModel({ProductName,Price,MedName,MedDega,HumDenge,OrderForm,RefundForm,DealType,TotalShared,LastShared,Hamaracommision,image})
 post.save()
 res.status(200).send({msg:"Deal added"})
 

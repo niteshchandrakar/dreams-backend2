@@ -12,6 +12,8 @@ const userSchema=mongoose.Schema({
     DealType:{type:String,required:true},
     TotalShared:{type:Number,required:true},
     LastShared:{type:String,required:true},
+    image:{type:String,required:true},
+
 },{
     versionKey:false
 })
