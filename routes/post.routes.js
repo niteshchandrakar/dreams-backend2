@@ -56,6 +56,20 @@ const {postid}=req.params
         res.status(400).send({msg:error})
     }
 })
+postRouter.get("/:postid", async (req, res) => {
+    const { postid } = req.params;
+    try {
+        const post = await postModel.findById(postid);
+        if (post) {
+            res.status(200).send(post);
+        } else {
+            res.status(404).send({ msg: "Post not found" });
+        }
+    } catch (error) {
+        res.status(400).send({ msg: error });
+    }
+});
+
 postRouter.delete("/delete/:postid",async(req,res)=>{
 const {postid}=req.params
     try{
