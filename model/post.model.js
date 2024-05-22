@@ -15,6 +15,7 @@ const userSchema=mongoose.Schema({
     image:{type:String,required:true},
     OrderLink:{type:String},
     RefundTime:{type:String},
+    Other:{type:String},
     
 
 },{
