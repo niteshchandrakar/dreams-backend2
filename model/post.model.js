@@ -13,6 +13,9 @@ const userSchema=mongoose.Schema({
     TotalShared:{type:Number,required:true},
     LastShared:{type:String,required:true},
     image:{type:String,required:true},
+    OrderLink:{type:String},
+    RefundTime:{type:String},
+    
 
 },{
     versionKey:false
